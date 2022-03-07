@@ -1,0 +1,14 @@
+.navbar {
+  padding: 0 0.5rem;
+  height: 60px;
+  background-color: white;
+  box-shadow: 0 0 2px #bbb;
+  width: calc(100% - 240px);
+  margin-right: 240px;
+  transition: all 300ms ease-in-out;
+}
+
+.navbar.expand {
+  width: calc(100% - 80px);
+  margin-right: 80px;
+}

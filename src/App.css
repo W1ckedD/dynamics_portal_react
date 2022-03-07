@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'B-Yekan';
+  src: url('../public/fonts/Yekan.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  direction: rtl;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+  font-family: 'B-Yekan';
 }
 
-.App-link {
-  color: #61dafb;
+button, input, textarea {
+  font-family: 'B-Yekan';
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app {
+  width: calc(100% - 240px);
+  padding: 1rem;
+  margin-right: 240px;
+  transition: all 300ms ease-in-out;
+}
+
+.app.expand {
+  width: calc(100% - 80px);
+  padding: 1rem 2rem;
+  margin-right: 80px;
 }
