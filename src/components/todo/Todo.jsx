@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TodoList from './TodoList';
 
 const _todos = [
@@ -33,7 +33,10 @@ const _todos = [
 ];
 
 export default function Todo() {
-  const [todos, setTodos] = useState(_todos);
+  const [todos, setTodos] = useState([]);
+  useEffect(() => {
+    setTodos(loadTodos());
+  }, []);
   const handleDragEnd = (result) => {
     if (!result.destination) {
       return;
@@ -42,6 +45,7 @@ export default function Todo() {
     const [removedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, removedItem);
     setTodos(items);
+    saveTodos(items);
   };
 
   const toggleDone = (id) => {
@@ -52,6 +56,7 @@ export default function Todo() {
       return todo;
     });
     setTodos(items);
+    saveTodos(items);
   };
   return (
     <div className="card ">
@@ -67,4 +72,13 @@ export default function Todo() {
       </div>
     </div>
   );
+}
+
+function loadTodos() {
+  const _todos = JSON.parse(localStorage.getItem('todos'));
+  return _todos
+}
+
+function saveTodos(todos) {
+  localStorage.setItem('todos', JSON.stringify(todos));
 }
