@@ -1,0 +1,46 @@
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+
+.modal {
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  box-shadow: 2px 2px 4px #ccc;
+}
+
+.btn-todo {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.todo-item:hover .btn-todo {
+  opacity: 1;
+}
+
+.items-per-page {
+  text-align: center;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  padding-right: 0.7rem;
+}
+
+.items-per-page:focus {
+  outline: none;
+}

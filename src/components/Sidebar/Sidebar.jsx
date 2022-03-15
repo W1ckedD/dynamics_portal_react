@@ -15,37 +15,37 @@ import cx from 'classnames';
 const menuItems = [
   {
     text: 'اخبار',
-    url: '/dynamics',
+    url: '/',
     icon: <FaNewspaper size={24} />,
   },
   {
     text: 'اطلاعیه ها',
-    url: '/dynamics',
+    url: '/',
     icon: <FaListAlt size={24} />,
   },
   {
     text: 'وظایف',
-    url: '/dynamics',
+    url: '/',
     icon: <FaTasks size={24} />,
   },
   {
     text: 'وظایف شخصی',
-    url: '/dynamics',
+    url: '/',
     icon: <FaTasks size={24} />,
   },
   {
     text: 'نوتیفیکیشن ها',
-    url: '/dynamics',
+    url: '/',
     icon: <FaBell size={24} />,
   },
   {
     text: 'گالری تصاویر',
-    url: '/dynamics',
+    url: '/',
     icon: <FaImages size={24} />,
   },
   {
     text: 'تقویم',
-    url: '/dynamics',
+    url: '/',
     icon: <FaCalendarAlt size={24} />,
   },
 ];
